@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './CalcApp.css';
-import "./InputButtons";
+import InputButtons from "./InputButtons";
 
 export default class CalcApp extends Component {
   constructor (props) {
@@ -10,7 +10,7 @@ export default class CalcApp extends Component {
     }
   }
   
-  click = klik => {
+  click = (klik) => {
     if (klik == "=") {
       this.hitung()}
     else {
