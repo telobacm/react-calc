@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import './CalcApp.css';
+import "./InputButtons";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class CalcApp extends Component {
+  constructor (props) {
+    super (props)
+    this.state = {
+      hasil: " ",
+    }
+  }
+  
+  click = klik => {
+    if (klik == "=") {
+      this.hitung()}
+    else {
+      this.setState({
+        hasil: this.state.hasil + klik
+      })
+    }
+  };
+
+  hitung = () => {
+    let masihkah = ""
+    if (this.state.hasil.includes("")){
+      masihkah = this.state.hasil.replace("","+"
+      )
+    } else {
+      masihkah = this.state.hasil
+      }
+    try {
+      this.setState({
+        hasil: (eval(masihkah) || "" ) + ""
+      })
+    }
+    catch (konconetry) {
+      this.setState ({
+        hasil: "error"
+      })
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="eksekutor">
+          <InputButtons hasil={this.state.hasil}/>
+
+        </div>
+      </div>
+    )
+  }
 }
-
-export default App;
