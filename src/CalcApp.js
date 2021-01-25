@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './CalcApp.css';
 import InputButtons from "./InputButtons";
+import ResultPlace from "./ResultPlace";
 
 export default class CalcApp extends Component {
   constructor (props) {
@@ -10,8 +11,8 @@ export default class CalcApp extends Component {
     }
   }
   
-  click = (klik) => {
-    if (klik == "=") {
+  click = klik => {
+    if (klik === "=") {
       this.hitung()}
     else {
       this.setState({
@@ -44,8 +45,9 @@ export default class CalcApp extends Component {
     return (
       <div>
         <div className="eksekutor">
-          <InputButtons hasil={this.state.hasil}/>
-
+          <ResultPlace hasil={this.state.hasil} />
+          <br/>
+          <InputButtons click={this.click} />
         </div>
       </div>
     )
