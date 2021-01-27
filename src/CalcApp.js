@@ -39,6 +39,7 @@ export default class CalcApp extends Component {
     }
     try {
       this.setState({
+        //eslint-disable-next-line
         hasil: (eval(masihkah) || "") + "",
       });
     } catch {
