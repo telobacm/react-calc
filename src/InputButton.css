@@ -18,12 +18,14 @@ button {
   border-radius: 2px;
   margin: 1px;
   padding: 12px 18px;
-  font-size: 20px;
-  font:bolder;
+  min-width: 80px;
+  min-height: 80px;
+  font-size: 35px;
+  font: bolder;
   text-transform: uppercase;
   cursor: pointer;
   color: white;
   background-color: #2196f3;
-  box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 1px #999;
   outline: none;
 }

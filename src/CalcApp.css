@@ -1,38 +1,34 @@
-.App {
+.konten {
+  width: 550px;
   text-align: center;
+  color: rgb(32, 33, 36);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.result {
+  width: 300px;
+  margin-top: 7px;
+  margin-left: 125px;
+  margin-bottom: 7px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pilih {
+  font-family: arial, sans-serif;
+  font-size: 30px;
+  margin-top: 40px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pilihan {
+  background-color: rgb(156, 95, 255);
+  background-position: center;
+  transition: background 0.8s;
 }
-
-.App-link {
-  color: #61dafb;
+.pilihan:hover {
+  background: #f352f3 radial-gradient(circle, transparent 1%, rgb(156, 95, 255) 1%) center/15000%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pilihan:active {
+  background-color: rgb(156, 95, 255);
+  background-size: 100%;
+  transition: background 0s;
 }
